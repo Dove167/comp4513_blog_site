@@ -1,0 +1,30 @@
+@page
+@model blogsite.Pages_Categories.DetailsModel
+
+@{
+    ViewData["Title"] = "Category Details";
+}
+
+<div class="row justify-content-center">
+    <div class="col-lg-6">
+        <div class="card shadow-sm">
+            <div class="card-header bg-info text-white">
+                <h4 class="mb-0"><i class="bi bi-eye me-2"></i>Category Details</h4>
+            </div>
+            <div class="card-body">
+                <dl class="row">
+                    <dt class="col-sm-3">Name</dt>
+                    <dd class="col-sm-9">@Html.DisplayFor(model => model.Category.Name)</dd>
+                </dl>
+            </div>
+            <div class="card-footer bg-transparent">
+                <a asp-page="./Edit" asp-route-id="@Model.Category.Id" class="btn btn-warning">
+                    <i class="bi bi-pencil me-2"></i>Edit
+                </a>
+                <a asp-page="./Index" class="btn btn-outline-secondary">
+                    <i class="bi bi-arrow-left me-2"></i>Back to List
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
